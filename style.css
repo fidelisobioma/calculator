@@ -1,0 +1,67 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+* {
+  box-sizing: border-box;
+}
+.container {
+  background-color: #0f1e3e;
+  padding: 10px;
+  border-radius: 8px;
+}
+.display {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  height: 150px;
+  font-size: 30px;
+  font-weight: bold;
+  padding: 10px;
+  background-color: rgba(50, 34, 34, 0.5);
+  color: white;
+  border: 1px solid rgb(136, 210, 240);
+}
+.buttons {
+  margin-top: 10px;
+  display: flex;
+  width: 350px;
+  justify-content: center;
+}
+.numbers {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  box-sizing: border-box;
+}
+.operators {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.numbers > div,
+.operators > div {
+  width: 80px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  background-color: #000d1a;
+  border-radius: 8px;
+  font-size: 30px;
+  font-weight: bold;
+  /* text-align: center; */
+  line-height: 60px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.numbers > div {
+  color: white;
+}
+.operators > div {
+  color: rgb(136, 210, 240);
+}
+.zero {
+  width: 170px !important;
+}
