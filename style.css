@@ -65,3 +65,7 @@ body {
 .zero {
   width: 170px !important;
 }
+.numbers > div:hover,
+.operators > div:hover {
+  background-color: #032240;
+}
