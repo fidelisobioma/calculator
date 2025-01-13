@@ -3,69 +3,68 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
+  background-color: #0f1e3e;
 }
 * {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 .container {
   background-color: #0f1e3e;
   padding: 10px;
-  border-radius: 8px;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 .display {
-  display: flex;
-  justify-content: end;
-  align-items: center;
   height: 150px;
   font-size: 30px;
   font-weight: bold;
   padding: 10px;
-  background-color: rgba(50, 34, 34, 0.5);
+  width: 100%;
   color: white;
-  border: 1px solid rgb(136, 210, 240);
+  border-bottom: 1px solid rgb(136, 210, 240);
+  flex: 1;
 }
 .buttons {
   margin-top: 10px;
-  display: flex;
-  width: 350px;
-  justify-content: center;
-}
-.numbers {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  box-sizing: border-box;
-}
-.operators {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
   gap: 10px;
 }
-.numbers > div,
-.operators > div {
+.buttons button {
   width: 80px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  background-color: #000d1a;
-  border-radius: 8px;
-  font-size: 30px;
+  height: 80px;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 1.5rem;
+  padding: 10px;
   font-weight: bold;
-  /* text-align: center; */
-  line-height: 60px;
-  cursor: pointer;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.numbers > div {
-  color: white;
-}
-.operators > div {
+  background-color: #0f1e3e;
   color: rgb(136, 210, 240);
+  border: none;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
-.zero {
-  width: 170px !important;
+.equal {
+  column-span: 7/8;
 }
-.numbers > div:hover,
-.operators > div:hover {
-  background-color: #032240;
+@media only screen and (min-width: 768px) {
+  .container {
+    max-width: 600px;
+  }
+  .buttons button {
+    width: 100px;
+    height: 100px;
+    font-size: 2rem;
+  }
+  .buttons {
+    gap: 30px;
+  }
+  .display {
+    margin-top: 30px;
+    height: 200px;
+  }
 }
